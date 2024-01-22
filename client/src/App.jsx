@@ -9,14 +9,13 @@ function App() {
       <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
         <Link to={"./"} className="flex gap-2 md:gap-3 items-center">
           <img
-            src="/logo-2.png"
+            src="/logo.png"
             alt="logo"
             className="w-8 h-8 md:w-12 md:h-12 object-contain"
           />
           <h2 className="text-2xl md:text-3xl text-gradient-2 font-bold tracking-[0.25px] font-inter">
             Imaginify
           </h2>
-          {/* <img src={logo} alt="logo" className="w-28 object-contain" /> */}
         </Link>
         <Link
           to={"/create-post"}
