@@ -1,8 +1,12 @@
+import ThemeSwitch from '@/components/shared/ThemeSwitch'
 import React from 'react'
 
 const ProfilePage = () => {
   return (
-    <div>ProfilePage</div>
+    <div>
+      <h1 className='text-3xl'>Profile</h1>
+      <ThemeSwitch />
+    </div>
   )
 }
 

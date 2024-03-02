@@ -87,70 +87,6 @@ const TransformationForm = ({
     defaultValues: initialValues,
   });
 
-  // 2. Define a submit handler.
-  // async function onSubmit(values: z.infer<typeof formSchema>) {
-  //   setIsSubmiting(true)
-
-  //   if(data | image) {
-  //     const transformationUrl = getCldImageUrl({
-  //       width: image?.width,
-  //       height: image?.height,
-  //       src: image?.publicId,
-  //       ...transformationConfig,
-  //     })
-
-  //     const imageData = {
-  //       title: values.title,
-  //       publicId: image?.publicId,
-  //       transformationType: type,
-  //       width: image?.width,
-  //       height: image?.height,
-  //       config: transformationConfig,
-  //       secureURL: image?.secureURL,
-  //       transformationURL: transformationUrl,
-  //       aspectRatio: values.aspectRatio,
-  //       prompt: values.prompt,
-  //       color: values.color,
-  //     }
-
-  //     if(action === "Add") {
-  //       try {
-  //         const newImage = await addImage({
-  //           image: imageData,
-  //           userId,
-  //           path: "/",
-  //         })
-
-  //         if(newImage) {
-  //           form.reset()
-  //           setImage(data)
-  //           router.push(`/transformations/${newImage._id}`)
-  //         }
-  //       } catch (error) {
-  //         console.log(error)
-  //       }
-  //     }
-  //     if(action === "Update") {
-  //       try {
-  //         const updatedImage = await updateImage({
-  //           image: {
-  //             ...imageData,
-  //             _id: data._id,
-  //           },
-  //           userId,
-  //           path: `/transformations/${data._id}`,
-  //         })
-
-  //         if(updatedImage) {
-  //           router.push(`/transformations/${updatedImage._id}`)
-  //         }
-  //       } catch (error) {
-  //         console.log(error)
-  //       }
-  //     }
-  //   }
-  //   setIsSubmiting(false)
-  // }
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
 
@@ -290,7 +226,7 @@ const TransformationForm = ({
             control={form.control}
             name="aspectRatio"
             formLabel="Aspect Ratio"
-            className="w-full"
+            className="w-full dark:bg-[#09090a]"
             render={({ field }) => (
               <Select
                 onValueChange={(value) =>

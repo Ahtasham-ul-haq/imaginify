@@ -34,7 +34,7 @@ const TransformedImage = ({
   return (
     <div className="flex flex-col gap-4">
       <div className="flex-between">
-        <h3 className="h3-bold text-dark-600">Transformed</h3>
+        <h3 className="h3-bold text-dark-600 dark:text-white">Transformed</h3>
 
         {hasDownload && (
           <button className="download-btn" onClick={downloadHandler}>
@@ -50,7 +50,7 @@ const TransformedImage = ({
       </div>
 
       {image?.publicId && transformationConfig ? (
-        <div className="relative">
+        <div className="relative ">
           <CldImage
             width={getImageSize(type, image, "width")}
             height={getImageSize(type, image, "height")}
@@ -83,7 +83,7 @@ const TransformedImage = ({
           )}
         </div>
       ) : (
-        <div className="transformed-placeholder">Transformed Image</div>
+        <div className="transformed-placeholder dark:bg-[#09090a]">Transformed Image</div>
       )}
     </div>
   );

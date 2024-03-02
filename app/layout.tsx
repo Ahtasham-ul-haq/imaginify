@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
+import { Providers } from "./providers";
 
 const IBMPlex = IBM_Plex_Sans({ 
   subsets: ["latin"],
@@ -27,7 +28,9 @@ export default function RootLayout({
     }}>
       <html lang="en">
         <body className={cn("font-IBMPLex antialiased", IBMPlex.variable)}>
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </body>
       </html>
     </ClerkProvider>
