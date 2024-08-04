@@ -226,7 +226,7 @@ const TransformationForm = ({
             control={form.control}
             name="aspectRatio"
             formLabel="Aspect Ratio"
-            className="w-full dark:bg-[#09090a]"
+            className="w-full"
             render={({ field }) => (
               <Select
                 onValueChange={(value) =>

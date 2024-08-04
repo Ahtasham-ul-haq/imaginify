@@ -87,11 +87,23 @@
   @apply mt-16 flex-1 overflow-auto py-8 lg:mt-0 lg:max-h-screen lg:py-10
 }
 
+/* CLERK CLASSES */
+
+.cl-userButtonOuterIdentifier {
+  color: #fff !important;
+}
+
+
+
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
   /* ===== UTILITIES */
   .wrapper {
     @apply max-w-5xl mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
+  }
+
+  .glass_gradient {
+    @apply bg-[#5334fe] shadow-[inset_25px_25px_50px_#2a1a7f,inset_-25px_-25px_50px_#7d4eff];
   }
 
   .gradient-text {
@@ -328,7 +340,7 @@
   }
 
   .sidebar-nav_element {
-    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 dark:hover:bg-black dark:hover:text-white hover:shadow-inner;
+    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-xl bg-cover  transition-all hover:bg-purple-100 dark:hover:bg-black dark:hover:text-white hover:shadow-inner;
   }
 
   .sidebar-link {
@@ -360,7 +372,7 @@
   .transformed-placeholder {
     @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px] border border-dashed bg-purple-100/20 shadow-inner;
   }
-}
+
 
 /* =====  CLERK OVERRIDES */
 .cl-userButtonBox {
@@ -373,4 +385,6 @@
   font-size: 16px;
   font-weight: 600;
   color: #384262;
+}
+
 }
