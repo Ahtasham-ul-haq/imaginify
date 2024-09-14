@@ -31,7 +31,7 @@ const Sidebar = () => {
                     key={link.route}
                     className={`sidebar-nav_element group ${
                       isActive
-                        ? "bg-[#5334fe] shadow-[inset_25px_25px_50px_#2a1a7f,inset_-25px_-25px_50px_#7d4eff] text-white"
+                        ? "bg-purple-gradient text-white"
                         : "text-gray-700 dark:text-gray-200"
                     }`}
                   >
@@ -79,7 +79,7 @@ const Sidebar = () => {
                   </li>
                 );
               })}
-              <li className="flex items-center rounded-xl cursor-pointer gap-2 p-4 text-white hover:bg-black w-full">
+              <li className="flex-center cursor-pointer gap-2 p-4">
                 <UserButton afterSignOutUrl="/" showName />
               </li>
             </ul>

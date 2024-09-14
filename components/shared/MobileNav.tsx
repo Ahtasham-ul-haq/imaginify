@@ -15,7 +15,7 @@ import { Button } from "../ui/button"
 const MobileNav = () => {
     const pathname = usePathname()
   return (
-    <header className="header">
+    <header className="header bg-[#09090a]">
         <Link href={"/"} className="flex items-center gap-2 md:py-2">
             <Image 
                 src={"/assets/images/logo-text.svg"}
@@ -40,14 +40,15 @@ const MobileNav = () => {
                   return (
                       <li
                       key={link.route}
-                      className={`${isActive && "gradient-text"} p-18 flex whitespace-nowrap text-dark-700`}
+                      className={`${isActive && "text-white"} p-18 flex whitespace-nowrap text-dark-400`}
                       >
-                    <Link href={link.route} className="sidebar-link cursor-pointer">
+                    <Link href={link.route} className="sidebar-link cursor-pointer ">
                         <Image 
                             src={link.icon}
                             alt="logo"
                             width={24}
                             height={24}
+                            className={`${isActive && "brightness-200"}`}
                             />
                         {link.label}
                     </Link>
