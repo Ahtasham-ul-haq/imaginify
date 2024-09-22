@@ -66,6 +66,7 @@ const TransformationForm = ({
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isTransforming, setIsTransforming] = useState(false)
   const [transformationConfig, setTransformationConfig] = useState(config)
+  const [isTransformed, setIsTransformed] = useState(false)
 
   const [isPending, startTransition] =useTransition()
 
@@ -200,6 +201,7 @@ const TransformationForm = ({
     startTransition(async () => {
       await updateCredits(userId, creditFee)
     })
+    setIsTransformed(true)
   }
 
   useEffect(() => {
@@ -324,7 +326,7 @@ const TransformationForm = ({
             transformationConfig={transformationConfig}
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row md:justify-end gap-4">
           <Button 
             type="button" 
             className="submit-button capitalize"
@@ -335,8 +337,8 @@ const TransformationForm = ({
           </Button>
           <Button 
             type="submit" 
-            className="submit-button capitalize"
-            disabled={isSubmitting}
+            className={`submit-button capitalize`}
+            disabled={isSubmitting || !isTransformed}
           >
             {isSubmitting ? "Submitting..." : "Save Image"}
           </Button>

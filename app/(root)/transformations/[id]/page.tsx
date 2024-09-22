@@ -21,8 +21,8 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
 
       <section className="mt-5 flex flex-wrap gap-4">
         <div className="p-14-medium md:p-16-medium flex gap-2">
-          <p className="text-dark-600">Transformation:</p>
-          <p className=" capitalize text-purple-400">
+          <p className="text-dark-600 dark:text-white">Transformation:</p>
+          <p className=" capitalize text-purple-400 dark:text-dark-400">
             {image.transformationType}
           </p>
         </div>
@@ -62,7 +62,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
         <div className="transformation-grid">
           {/* MEDIA UPLOADER */}
           <div className="flex flex-col gap-4">
-            <h3 className="h3-bold text-dark-600">Original</h3>
+            <h3 className="h3-bold text-dark-600 dark:text-white">Original</h3>
 
             <Image
               width={getImageSize(image.transformationType, image, "width")}
@@ -85,7 +85,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
         </div>
 
         {userId === image.author.clerkId && (
-          <div className="mt-4 space-y-4">
+          <div className="flex flex-col gap-4 md:flex-row items-center justify-end mt-4">
             <Button asChild type="button" className="submit-button capitalize">
               <Link href={`/transformations/${image._id}/update`}>
                 Update Image

@@ -45,6 +45,7 @@ const TransformedImage = ({
               height={24}
               className="pb-[6px]"
             />
+            Download
           </button>
         )}
       </div>
