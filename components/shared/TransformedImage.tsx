@@ -84,7 +84,7 @@ const TransformedImage = ({
           )}
         </div>
       ) : (
-        <div className="transformed-placeholder dark:bg-[#09090a]">Transformed Image</div>
+        <div className="transformed-placeholder dark:bg-dark-p1">Transformed Image</div>
       )}
     </div>
   );

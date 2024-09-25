@@ -1,12 +1,13 @@
 "use client";
 
 import { navLinks } from "@/constants";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignOutButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { Button } from "../ui/button";
+import { LogOutIcon } from "lucide-react";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -79,8 +80,12 @@ const Sidebar = () => {
                   </li>
                 );
               })}
-              <li className="flex-center cursor-pointer gap-2 p-4">
-                <UserButton afterSignOutUrl="/" showName />
+              <li className="flex items-center font-semibold group rounded-lg text-gray-700 cursor-pointer gap-4 w-full p-4 hover:bg-purple-gradient hover:text-white dark:text-white">
+                {/* <UserButton afterSignOutUrl="/" showName defaultOpen={true} /> */}
+                <LogOutIcon className="w-6 h-6 text-gray-700 dark:text-white group-hover:text-white" />
+                <SignOutButton>
+                  Log out
+                </SignOutButton>
               </li>
             </ul>
           </SignedIn>

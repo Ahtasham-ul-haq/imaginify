@@ -15,7 +15,7 @@ import { Button } from "../ui/button"
 const MobileNav = () => {
     const pathname = usePathname()
   return (
-    <header className="header bg-[#09090a]">
+    <header className="header bg-dark-p1">
         <Link href={"/"} className="flex items-center gap-2 md:py-2">
             <Image 
                 src={"/assets/images/logo-text.svg"}

@@ -32,7 +32,7 @@ export const navLinks = [
     {
       label: "Profile",
       route: "/profile",
-      icon: "/assets/icons/profile.svg",
+      icon: `/assets/icons/profile.svg`,
     },
     {
       label: "Buy Credits",

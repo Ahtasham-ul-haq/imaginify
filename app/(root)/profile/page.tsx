@@ -6,6 +6,7 @@ import { Collection } from "@/components/shared/Collection";
 import Header from "@/components/shared/Header";
 import { getUserImages } from "@/lib/actions/image.actions";
 import { getUserById } from "@/lib/actions/user.actions";
+import ThemeSwitch from "@/components/shared/ThemeSwitch";
 
 const Profile = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
@@ -47,6 +48,11 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
             />
             <h2 className="h2-bold text-dark-600">{images?.data.length}</h2>
           </div>
+        </div>
+
+        <div className="profile-theme">
+        <p className="p-14-medium md:p-16-medium mb-4">APPEARANCE</p>
+          <ThemeSwitch />
         </div>
       </section>
 
